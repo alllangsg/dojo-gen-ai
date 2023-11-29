@@ -37,7 +37,7 @@ export const App = () => {
   const recordButtonLabel = recordState === RecordState.START ? 'Stop Recording' : 'Start Recording'
   
   //html document
-  return 
+  return (
   <div>
     Ready to build your AI note taker ? Let's go 🚀🚀🔥
     
@@ -56,4 +56,5 @@ export const App = () => {
     <audio id = "audio" controls src = {audioDataURL} style={{marginTop:10}} />
     
   </div>
-}
+  );
+};
