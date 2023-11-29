@@ -40,14 +40,20 @@ export const App = () => {
   return 
   <div>
     Ready to build your AI note taker ? Let's go 🚀🚀🔥
-
-    <AudioReactRecorder state={recordState} onStop = {onStop} />
     
-    <button onClick={()=>{setRecordState(RecordState.START)}}>
-	  Click me
+    <button 
+    id ='toggle'
+    onClick={onClick}
+    style={{marginBottom:10}}
+
+    >  
+	  {recordButtonLabel}
+
     </button>
 
-    <audio id = "audio" controls src = {audioDataURL} />
+    <AudioReactRecorder state={recordState} onStop = {onStop} canvasHeight={20}/>
+
+    <audio id = "audio" controls src = {audioDataURL} style={{marginTop:10}} />
     
   </div>
 }
